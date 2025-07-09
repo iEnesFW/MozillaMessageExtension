@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Kick Chat Mesajlayıcı",
+  "version": "1.0",
+  "description": "Tüm Kick sekmelerine starter mesajı gönder",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "https://kick.com/*"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_title": "starter gönder"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://kick.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
